@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+## Task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+There are 2 tasks :-
 
-## Available Scripts
+1. Contact Management App
+2. Dashboard on Diseases Tracking
 
-In the project directory, you can run:
+## Requirements
 
-### `npm start`
+- Use Charts and Maps using ReactJS, TypeScript, TailwindCSS, React Router v6 and React Query aka Tanstack Query.
+- A GitHub/GitLab repo and deploy your app on free services like Vercel, Github Pages or Heroku etc
+- Properly commented code and brief documentation on how to run the app, including information on the API endpoint used.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Pages & their objectives
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The app will have 2 pages :-
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Contacts
+   - Create new contact
+   - Display all contacts
+   - View contacts details
+   - Feature to edit and delete contacts
+   - Use of Redux to store the contact data
+2. Charts
+   - A line graph showing the cases fluctuations
+   - A react leaflet map with markers that indicates the country name, total number of active, recovered cases and deaths in that particular country as a popup.
+   - Use following apis to fetch data
+     - World wide data of cases: https://disease.sh/v3/covid-19/all
+     - Country Specific data of cases: https://disease.sh/v3/covid-19/countries
+     - Graph data for cases with date: https://disease.sh/v3/covid-19/historical/all?lastdays=all

@@ -1,0 +1,104 @@
+.createContactContainer {
+  padding: 50px;
+}
+
+.displayContactContainer {
+  min-height: 50vh;
+  color: white;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.nodataIcon {
+  width: 200px;
+  height: 200px;
+}
+
+.createContactButton {
+  color: white;
+  outline: 1px solid lightgray;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 20px;
+  background-color: var(--blue-light-shade);
+}
+
+.createContactButton:hover {
+  background-color: rgb(127, 159, 255);
+}
+
+.listContactHeader {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  margin: 30px auto 30px;
+}
+
+.contactCardContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.contactCard {
+  color: white;
+  width: 200px;
+  background-color: var(--blue-light-shade);
+  border: 1px solid black;
+  margin: 20px;
+  min-height: 200px;
+  text-align:  center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.contactCardDetail {
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contactCard button {
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  color: white;
+  padding: 10px 15px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.editButton {
+  background-color: rgb(6, 165, 88);
+}
+
+.editButton:hover {
+  background-color: rgb(3, 114, 61);
+}
+
+.deleteButton {
+  background-color: rgb(255, 81, 0);
+}
+
+.deleteButton:hover {
+  background-color: rgb(162, 51, 0);
+}
+
+@media screen and (max-width: 800px) {
+  .contactCard {
+    margin: 20px;
+  }
+}

@@ -1,0 +1,26 @@
+.textInputContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.textInput {
+  width: 100%;
+  padding: 10px 10px;
+  outline: none;
+  border: 1px solid grey;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+.textInput:focus {
+  outline: 2px solid rgb(51, 140, 243);
+}
+
+.errorMessage {
+  font-size: 1rem;
+  color: #de1b55;
+  text-align: left;
+}

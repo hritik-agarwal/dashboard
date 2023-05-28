@@ -1,0 +1,33 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerContainer {
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  background-color: darkcyan;
+}
+
+.innerContainer {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.contentContainer {
+  flex: 1;
+}
+
+@media screen and (max-width: 800px) {
+  .headerContainer {
+    display: none;
+  }
+  .innerContainer {
+    flex-direction: column;
+  }
+}
