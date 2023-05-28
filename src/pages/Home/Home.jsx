@@ -5,7 +5,7 @@ function Home() {
   const navigate = useNavigate()
   useEffect(() => {
     navigate('/contact')
-  }, [])
+  }, [navigate])
   return <div>Home</div>
 }
 export default Home

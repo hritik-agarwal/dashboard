@@ -1,4 +1,4 @@
-import {MapContainer, Marker, Popup, TileLayer, Tooltip} from 'react-leaflet'
+import {MapContainer, Marker, TileLayer, Tooltip} from 'react-leaflet'
 import styles from './MapChart.module.css'
 import {nanoid} from '@reduxjs/toolkit'
 
