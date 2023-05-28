@@ -1,10 +1,10 @@
 import {useEffect, useState} from 'react'
-import styles from './Chart.module.css'
-import LineChartComponent from '../../components/LineChart/LineChart'
-import MapChart from '../../components/MapChart/MapChart'
-import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import {Carousel} from 'react-responsive-carousel'
-import Loader from '../../components/Loader/Loader'
+
+import styles from './Chart.module.css'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import {Loader, MapChart, LineChartComponent} from '../../components'
+import {fetchLineChartData, fetchMapChartData} from '../../api/external'
 
 const getFormattedData = data => {
   const {cases, deaths, recovered} = data
@@ -22,14 +22,13 @@ function Chart() {
   const [mapChartData, setMapChartData] = useState(null)
 
   useEffect(() => {
-    fetch('https://disease.sh/v3/covid-19/historical/all?lastdays=all')
-      .then(data => data.json())
-      .then(data => setLineChartData(getFormattedData(data)))
-      .catch(error => console.log(error))
-    fetch('https://disease.sh/v3/covid-19/countries')
-      .then(data => data.json())
-      .then(data => setMapChartData(data))
-      .catch(error => console.log(error))
+    const fetchData = async () => {
+      const date_cases_data = await fetchLineChartData()
+      const country_cases_data = await fetchMapChartData()
+      setLineChartData(getFormattedData(date_cases_data))
+      setMapChartData(country_cases_data)
+    }
+    fetchData()
   }, [])
 
   if (!lineChartData || !mapChartData) {
