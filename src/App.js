@@ -1,33 +1,25 @@
-import {Route, Routes} from 'react-router-dom'
+import {Outlet, Route, Routes} from 'react-router-dom'
 
 import styles from './App.module.css'
-import Sidebar from './components/Sidebar/Sidebar'
-import {
-  Home,
-  Chart,
-  Contact,
-  ContactCreate,
-  ContactDisplay,
-  ContactEdit,
-} from './pages'
+import {Redirect, Sidebar} from './components'
+import {Error, Chart, ContactEdit, ContactCreate, ContactDisplay} from './pages'
 
 function App() {
   return (
     <div className={styles.container}>
-      <div className={styles.innerContainer}>
-        <Sidebar />
-        <section className={styles.contentContainer}>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='contact' element={<Contact />}>
-              <Route index element={<ContactDisplay />} />
-              <Route path='create' element={<ContactCreate />} />
-              <Route path='edit' element={<ContactEdit />} />
-            </Route>
-            <Route path='chart' element={<Chart />} />
-          </Routes>
-        </section>
-      </div>
+      <Sidebar />
+      <section className={styles.contentContainer}>
+        <Routes>
+          <Route path='/' element={<Redirect path={'/contact'} />} />
+          <Route path='chart' element={<Chart />} />
+          <Route path='contact' element={<Outlet />}>
+            <Route index element={<ContactDisplay />} />
+            <Route path='edit' element={<ContactEdit />} />
+            <Route path='create' element={<ContactCreate />} />
+          </Route>
+          <Route path='*' element={<Error />} />
+        </Routes>
+      </section>
     </div>
   )
 }

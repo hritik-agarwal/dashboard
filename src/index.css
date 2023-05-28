@@ -9,6 +9,7 @@
 :root {
   --blue-dark-shade: #1a1a30;
   --blue-light-shade: #2e3157;
+  --text-size-normal: 1.2rem;
 }
 
 body {

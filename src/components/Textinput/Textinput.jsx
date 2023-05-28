@@ -1,11 +1,11 @@
 import styles from './Textinput.module.css'
 
 function TextInput(props) {
-  const { type, name, value, onChange, onBlur, placeholder = '' } = props
+  const {name, value, onChange, onBlur, placeholder = ''} = props
   return (
     <div className={styles.textInputContainer}>
       <input
-        type={type}
+        type='text'
         name={name}
         value={value}
         placeholder={placeholder}

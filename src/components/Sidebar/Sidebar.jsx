@@ -1,37 +1,35 @@
-
-import { NavLink } from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import styles from './Sidebar.module.css'
+import {IMAGE} from '../../assets'
+
+const getNavStyle = ({isActive}) => {
+  return isActive ? styles.active : undefined
+}
+
+const NAVBAR = [
+  {
+    path: 'contact',
+    name: 'Contact',
+    icon: IMAGE.contactIcon,
+  },
+  {
+    path: 'chart',
+    name: 'Chart',
+    icon: IMAGE.chartIcon,
+  },
+]
 
 function Sidebar() {
-  const getNavStyle = (isActive, page) => {
-    return isActive ? styles.active : undefined
-  }
   return (
     <aside className={styles.sidebarContainer}>
       <nav className={styles.sidebarLinkContainer}>
-        <div className={styles.headerContainer}>
-          <div className={styles.header}>Dashboard</div>
-        </div>
-        <NavLink
-          to='/contact'
-          className={({isActive}) => getNavStyle(isActive, 'Contacts Page')}>
-          <img
-            className={styles.icon}
-            src={require('../../assets/contact.png')}
-            alt=''
-          />
-          Contacts
-        </NavLink>
-        <NavLink
-          to='/chart'
-          className={({isActive}) => getNavStyle(isActive, 'Chart Page')}>
-          <img
-            className={styles.icon}
-            src={require('../../assets/chart.png')}
-            alt=''
-          />
-          Chart
-        </NavLink>
+        <div className={styles.header}>Dashboard</div>
+        {NAVBAR.map((item, index) => (
+          <NavLink key={index} to={item.path} className={getNavStyle}>
+            <img alt={item.path} className={styles.icon} src={item.icon} />
+            <p>{item.name}</p>
+          </NavLink>
+        ))}
       </nav>
     </aside>
   )

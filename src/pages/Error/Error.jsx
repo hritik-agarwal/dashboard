@@ -1,6 +1,6 @@
+import styles from './Error.module.css'
+
 function Error() {
-  return (
-    <div>Error</div>
-  )
+  return <div className={styles.container}>Page does not exist!</div>
 }
 export default Error
