@@ -1,17 +1,17 @@
 ## Task
 
-There are 2 tasks :-
+There are 2 sub-tasks :-
 
-1. Contact Management App
-2. Dashboard on Diseases Tracking
+1. Contact Management
+2. Charts on Diseases Tracking
 
-## Requirements
+## Instructions
 
 - Use Charts and Maps using ReactJS, TypeScript, TailwindCSS, React Router v6 and React Query aka Tanstack Query.
 - A GitHub/GitLab repo and deploy your app on free services like Vercel, Github Pages or Heroku etc
 - Properly commented code and brief documentation on how to run the app, including information on the API endpoint used.
 
-## Pages & their objectives
+## Requirements
 
 The app will have 2 pages :-
 
@@ -28,3 +28,12 @@ The app will have 2 pages :-
      - World wide data of cases: https://disease.sh/v3/covid-19/all
      - Country Specific data of cases: https://disease.sh/v3/covid-19/countries
      - Graph data for cases with date: https://disease.sh/v3/covid-19/historical/all?lastdays=all
+
+## See Live Demo
+[Checkout Live Demo ↗️](https://taiyo-task.netlify.app/)
+
+
+## To Run Locally
+1. Clone the repo ```git clone https://github.com/hritik-agarwal/dashboard```
+2. Install packages ```npm i```
+3. Run the app ```npm start```
