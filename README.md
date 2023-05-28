@@ -8,6 +8,7 @@ There are 2 sub-tasks :-
 ## See Live Demo
 
 [Checkout Live Demo ↗️](https://taiyo-task.netlify.app/)
+
 Note: Charts may take 3-4 sec to display on first load.
 
 ## Instructions
